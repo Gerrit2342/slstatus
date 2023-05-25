@@ -5,9 +5,12 @@
 #include "../slstatus.h"
 #include "../util.h"
 
+#include <locale.h>
+
 const char *
 datetime(const char *fmt)
 {
+	setlocale(LC_ALL, "");
 	time_t t;
 
 	t = time(NULL);
