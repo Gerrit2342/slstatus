@@ -68,7 +68,7 @@ static const struct arg args[] = {
 	{run_command, " %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1"},
 	{run_command, "  %s%% | ",           "awk 'NR==FNR {getline line < ARGV[2]; printf \"%2.0f\", (line/$1)*100 }' /sys/class/backlight/amdgpu_bl0/max_brightness /sys/class/backlight/amdgpu_bl0/actual_brightness"},
 	{battery_perc, "  %s%% | ",		"BAT0"},
-	{datetime, "%s",           "%a %e.%m. | %T" },
+	{datetime, "%s",           "%a %e.%m. | %H:%M" },
 	/* Zeigt die Helligkeit an (ARGV[2] = zweite Datei NR==FNR liest nur Datei 1*/
 
 
